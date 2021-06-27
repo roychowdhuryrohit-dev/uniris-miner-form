@@ -1,0 +1,19 @@
+{
+  "name": "uniris-miner-form",
+  "version": "1.0.0",
+  "description": "Uniris Miner Registration Form",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node -r dotenv/config app"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "csv-writer": "^1.6.0",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "http-terminator": "^3.0.0",
+    "jquery": "^3.6.0",
+    "systeminformation": "^5.7.7"
+  }
+}

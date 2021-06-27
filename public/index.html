@@ -1,0 +1,43 @@
+<html>
+
+<head>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/index.js"></script>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <img class="logo" src="logoU-left-blue.svg" alt="uniris-logo">
+    <div class="form">
+        <div class="title">Welcome</div>
+        <div class="subtitle">Let's register your miner!</div>
+        <div class="input-container ic1">
+            <input id="name" class="input" type="text" placeholder=" " autocomplete="off" />
+            <div class="cut cut-short"></div>
+            <label for="name" class="placeholder">Full Name</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="email" class="input" type="text" placeholder=" " autocomplete="off" />
+            <div class="cut cut-short"></div>
+            <label for="email" class="placeholder">Email</label>
+        </div>
+        <div class="input-container ic2">
+            <input id="wallet-address" class="input" type="text" placeholder=" " autocomplete="off" />
+            <div class="cut"></div>
+            <label for="wallet-address" class="placeholder">Wallet Address</>
+        </div>
+        <div class="input-container ic2 radio-container">
+            &nbsp;&nbsp;&nbsp;Connection Type
+            <label style="margin-left: 40px; font-weight: bold;">
+                <input name="connection-type" type="radio" value="wlan" /> &nbsp;&nbsp;&nbsp;WiFi
+            </label>
+            <label style="margin-left: 20px; font-weight: bold;">
+                <input name="connection-type" type="radio" value="eth" checked="checked"/> &nbsp;&nbsp;&nbsp;Ethernet
+            </label>
+        </div>
+        <button type="text" id="submit-btn" class="submit">Submit</button>
+    </div>
+</body>
+
+</html>
