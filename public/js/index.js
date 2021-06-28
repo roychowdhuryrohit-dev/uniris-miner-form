@@ -5,10 +5,10 @@ $(function () {
 
         name = $("#name").val();
         email = $("#email").val();
-        addr = $("#wallet-address").val();
-        ctype = $("input[name='connection-type']:checked").val();
+        // addr = $("#wallet-address").val();
+        // ctype = $("input[name='connection-type']:checked").val();
 
-        if (name === "" || email === "" || addr === "" || ctype == null) {
+        if (name === "" || email === "") {
             alert("Fill all field!");
             return;
         }
@@ -23,8 +23,8 @@ $(function () {
             alert("Submitted successfully!");
             $("#name").val("");
             $("#email").val("");
-            $("#wallet-address").val("");
-            $("input[name='connection-type']").prop("checked", false);
+            // $("#wallet-address").val("");
+            // $("input[name='connection-type']").prop("checked", false);
         }).fail(function (xhr, status, error) {
             if (xhr.status === 400) {
                 alert(xhr.responseText);

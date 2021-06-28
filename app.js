@@ -24,7 +24,7 @@ app.use(express.json());
 
 const csvWriter = createCsvWriter({
     path: "data/data.csv",
-    header: ['name', 'email', 'address', 'connectionType', 'ip', 'dIface', 'ethMAC', 'wlanMAC', 'timestamp'],
+    header: ['name', 'email', 'ip', 'dIface', 'ethMAC', 'wlanMAC', 'timestamp'],
     append: true
 });
 
@@ -36,7 +36,7 @@ app.post("/submit", (req, res) => {
 
     // console.log(req.ip);
 
-    if (!req.body['name'] || !req.body['email'] || !req.body['address'] || !req.body['connectionType']) {
+    if (!req.body['name'] || !req.body['email']) {
         res.status(400).send("Invalid Fields!");
         return;
     }
@@ -80,7 +80,7 @@ app.post("/submit", (req, res) => {
             }
 
             resp.on('data', ip => {
-                csvWriter.writeRecords([{ name: req.body.name, email: req.body.email, address: req.body.address, connectionType: req.body.connectionType, ip: ip, dIface: defaultIface, ethMAC: ethMAC, wlanMAC: wlanMAC, timestamp: Math.floor(Date.now() / 1000) }])
+                csvWriter.writeRecords([{ name: req.body.name, email: req.body.email, ip: ip, dIface: defaultIface, ethMAC: ethMAC, wlanMAC: wlanMAC, timestamp: Math.floor(Date.now() / 1000) }])
                     .then(() => {
                         res.end("");
                     })
