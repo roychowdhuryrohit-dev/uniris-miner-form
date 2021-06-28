@@ -1,7 +1,7 @@
 module.exports = {
     apps: [{
         name: "miner-form",
-        script: "./app.js",
+        script: "app.js",
         env: {
             NODE_ENV: "development",
         },
