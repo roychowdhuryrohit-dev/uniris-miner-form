@@ -1,7 +1,7 @@
 module.exports = {
     apps: [{
         name: "miner-form",
-        script: "app.js",
+        script: "/home/uniris/uniris-miner-form-master/app.js",
         env: {
             NODE_ENV: "development",
         },
