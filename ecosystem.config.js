@@ -10,7 +10,7 @@ module.exports = {
         },
         node_args: "-r dotenv/config",
         watch: true,
-        ignore_watch: ["node_modules", ".env", ".gitignore", "package.json", "data"],
+        ignore_watch: ["node_modules", ".env", ".git", ".devcontainer", "README.md", ".gitignore", ".env.sample", "package.json", "Makefile", "data"],
         watch_options: {
             followSymlinks: false,
         },
